@@ -1,0 +1,207 @@
+/* CSS Reset */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* Stylesheet */
+html {
+    font-size: 62.5%;
+}
+* {
+    box-sizing: border-box;
+    font-family: "Arial", sans-serif;
+}
+.container {
+    width: 100%;
+    max-width: 960px;
+    padding: 20px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+.page-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.page-header h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.page-header ul {
+    display: flex;
+    justify-content: flex-end;
+}
+.page-header li {
+    border: 1px solid black;
+    width: 80px;
+    padding: 8px 16px;
+    text-align: center;
+}
+.page-header a {
+    color: inherit;
+    font-size: 1.6rem;
+    text-decoration: none;
+}
+.page-main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.about {
+    margin-top: 20px;
+    width: 85%;
+    height: 400px;
+    background: url('assets/cup-of-coffee-1280537_1920.jpg') no-repeat center/contain;
+    background-size: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.info h2 {
+    font-size: 4rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: white;
+}
+.info button {
+    width: 150px;
+    margin: 20px;
+    padding: 8px 0;
+    outline: none;
+}
+.gallery {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-around;
+    padding: 25px 0;
+    
+}
+.gallery figure {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    align-content: space-around;
+    margin: 10px;
+}
+.gallery figure img {
+    width: 250px;
+}
+.gallery figcaption {
+    margin: 10px;
+    font-size: 1.6rem;
+    text-align: center;
+}
+.page-footer {
+    width: 100%;
+    background-color: #a5875e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+.page-footer button {
+    width: 120px;
+    margin: 20px;
+    padding: 8px 0;
+    outline: none;
+}
+@media screen and (max-width: 800px){
+    .about {
+        height: 300px;
+    }
+    .gallery {
+        justify-content: space-evenly;
+    }
+    .gallery figure {
+       width: 45%;
+    }
+    .info h2 {
+        font-size: 2.4rem;
+    }
+}
+@media screen and (max-width: 600px){
+    .page-header {
+        flex-direction: column;
+    }
+    .page-header ul {
+        flex-direction: column;
+    }
+    .page-header li {
+        width: 100px;
+    }
+    .page-header h1 {
+        margin-bottom: 20px;
+    }
+    .about {
+        height: 200px;
+    }
+    .info h2 {
+        font-size: 2rem;
+    }
+    .gallery figure img {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .info button {
+        width: 120px;
+        padding: 8px 16px;
+        font-size: 1.6rem;
+    }
+}
